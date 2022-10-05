@@ -3,4 +3,4 @@ project(EmpresaVentaMas)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(EmpresaVentaMas main.cpp)
+add_executable(EmpresaVentaMas main.cpp Clientes/Clientes.cpp Clientes/Clientes.h)

@@ -1,3 +1,6 @@
 # ninja log v5
 0	688	6866479928443340	CMakeFiles/EmpresaVentaMas.dir/main.cpp.obj	fb7bcfca8c8d04b9
 693	1706	6866479938513271	EmpresaVentaMas.exe	ac018c99a0423a23
+7	975	6866535999449566	CMakeFiles/EmpresaVentaMas.dir/Clientes/Clientes.cpp.obj	11be06f931dcbad7
+40	1090	6866536000561729	CMakeFiles/EmpresaVentaMas.dir/main.cpp.obj	f420b4d4b9e7f8bb
+1090	2729	6866536016767730	EmpresaVentaMas.exe	b29ea6ae29ec690c
