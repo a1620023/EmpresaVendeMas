@@ -55,23 +55,35 @@ build CMakeFiles/EmpresaVentaMas.dir/main.cpp.obj: CXX_COMPILER__EmpresaVentaMas
   OBJECT_DIR = CMakeFiles\EmpresaVentaMas.dir
   OBJECT_FILE_DIR = CMakeFiles\EmpresaVentaMas.dir
 
-build CMakeFiles/EmpresaVentaMas.dir/Clientes/Cliente.cpp.obj: CXX_COMPILER__EmpresaVentaMas_Debug C$:/LAB/C++/Projects/EmpresaVendeMas/Clientes/Cliente.cpp || cmake_object_order_depends_target_EmpresaVentaMas
-  DEP_FILE = CMakeFiles\EmpresaVentaMas.dir\Clientes\Cliente.cpp.obj.d
+build CMakeFiles/EmpresaVentaMas.dir/Model/Clientes/Cliente.cpp.obj: CXX_COMPILER__EmpresaVentaMas_Debug C$:/LAB/C++/Projects/EmpresaVendeMas/Model/Clientes/Cliente.cpp || cmake_object_order_depends_target_EmpresaVentaMas
+  DEP_FILE = CMakeFiles\EmpresaVentaMas.dir\Model\Clientes\Cliente.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\EmpresaVentaMas.dir
-  OBJECT_FILE_DIR = CMakeFiles\EmpresaVentaMas.dir\Clientes
+  OBJECT_FILE_DIR = CMakeFiles\EmpresaVentaMas.dir\Model\Clientes
 
-build CMakeFiles/EmpresaVentaMas.dir/Vendedores/Vendedor.cpp.obj: CXX_COMPILER__EmpresaVentaMas_Debug C$:/LAB/C++/Projects/EmpresaVendeMas/Vendedores/Vendedor.cpp || cmake_object_order_depends_target_EmpresaVentaMas
-  DEP_FILE = CMakeFiles\EmpresaVentaMas.dir\Vendedores\Vendedor.cpp.obj.d
+build CMakeFiles/EmpresaVentaMas.dir/Model/Vendedores/Vendedor.cpp.obj: CXX_COMPILER__EmpresaVentaMas_Debug C$:/LAB/C++/Projects/EmpresaVendeMas/Model/Vendedores/Vendedor.cpp || cmake_object_order_depends_target_EmpresaVentaMas
+  DEP_FILE = CMakeFiles\EmpresaVentaMas.dir\Model\Vendedores\Vendedor.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\EmpresaVentaMas.dir
-  OBJECT_FILE_DIR = CMakeFiles\EmpresaVentaMas.dir\Vendedores
+  OBJECT_FILE_DIR = CMakeFiles\EmpresaVentaMas.dir\Model\Vendedores
 
-build CMakeFiles/EmpresaVentaMas.dir/Productos/Producto.cpp.obj: CXX_COMPILER__EmpresaVentaMas_Debug C$:/LAB/C++/Projects/EmpresaVendeMas/Productos/Producto.cpp || cmake_object_order_depends_target_EmpresaVentaMas
-  DEP_FILE = CMakeFiles\EmpresaVentaMas.dir\Productos\Producto.cpp.obj.d
+build CMakeFiles/EmpresaVentaMas.dir/Model/Productos/Producto.cpp.obj: CXX_COMPILER__EmpresaVentaMas_Debug C$:/LAB/C++/Projects/EmpresaVendeMas/Model/Productos/Producto.cpp || cmake_object_order_depends_target_EmpresaVentaMas
+  DEP_FILE = CMakeFiles\EmpresaVentaMas.dir\Model\Productos\Producto.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\EmpresaVentaMas.dir
-  OBJECT_FILE_DIR = CMakeFiles\EmpresaVentaMas.dir\Productos
+  OBJECT_FILE_DIR = CMakeFiles\EmpresaVentaMas.dir\Model\Productos
+
+build CMakeFiles/EmpresaVentaMas.dir/Controller/Ventas/Venta.cpp.obj: CXX_COMPILER__EmpresaVentaMas_Debug C$:/LAB/C++/Projects/EmpresaVendeMas/Controller/Ventas/Venta.cpp || cmake_object_order_depends_target_EmpresaVentaMas
+  DEP_FILE = CMakeFiles\EmpresaVentaMas.dir\Controller\Ventas\Venta.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\EmpresaVentaMas.dir
+  OBJECT_FILE_DIR = CMakeFiles\EmpresaVentaMas.dir\Controller\Ventas
+
+build CMakeFiles/EmpresaVentaMas.dir/Controller/Login/Login.cpp.obj: CXX_COMPILER__EmpresaVentaMas_Debug C$:/LAB/C++/Projects/EmpresaVendeMas/Controller/Login/Login.cpp || cmake_object_order_depends_target_EmpresaVentaMas
+  DEP_FILE = CMakeFiles\EmpresaVentaMas.dir\Controller\Login\Login.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\EmpresaVentaMas.dir
+  OBJECT_FILE_DIR = CMakeFiles\EmpresaVentaMas.dir\Controller\Login
 
 
 # =============================================================================
@@ -81,7 +93,7 @@ build CMakeFiles/EmpresaVentaMas.dir/Productos/Producto.cpp.obj: CXX_COMPILER__E
 #############################################
 # Link the executable EmpresaVentaMas.exe
 
-build EmpresaVentaMas.exe: CXX_EXECUTABLE_LINKER__EmpresaVentaMas_Debug CMakeFiles/EmpresaVentaMas.dir/main.cpp.obj CMakeFiles/EmpresaVentaMas.dir/Clientes/Cliente.cpp.obj CMakeFiles/EmpresaVentaMas.dir/Vendedores/Vendedor.cpp.obj CMakeFiles/EmpresaVentaMas.dir/Productos/Producto.cpp.obj
+build EmpresaVentaMas.exe: CXX_EXECUTABLE_LINKER__EmpresaVentaMas_Debug CMakeFiles/EmpresaVentaMas.dir/main.cpp.obj CMakeFiles/EmpresaVentaMas.dir/Model/Clientes/Cliente.cpp.obj CMakeFiles/EmpresaVentaMas.dir/Model/Vendedores/Vendedor.cpp.obj CMakeFiles/EmpresaVentaMas.dir/Model/Productos/Producto.cpp.obj CMakeFiles/EmpresaVentaMas.dir/Controller/Ventas/Venta.cpp.obj CMakeFiles/EmpresaVentaMas.dir/Controller/Login/Login.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\EmpresaVentaMas.dir
