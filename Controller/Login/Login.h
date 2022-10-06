@@ -7,6 +7,8 @@
 
 
 class Login {
+public:
+    int login();
 
 };
 

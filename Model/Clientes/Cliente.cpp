@@ -39,3 +39,7 @@ void Cliente::setApellidosCliente(string apellidosCliente) {
     Cliente::apellidosCliente = apellidosCliente;
 }
 
+Cliente::Cliente(int i, string basicString, string basicString1, int i1) {
+
+}
+

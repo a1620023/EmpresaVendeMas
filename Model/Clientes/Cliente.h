@@ -29,6 +29,8 @@ public:
     string getApellidosCliente();
 
     void setApellidosCliente(string apellidosCliente);
+
+    Cliente(int i, string basicString, string basicString1, int i1);
 };
 
 
