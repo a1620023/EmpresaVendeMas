@@ -8,11 +8,12 @@ using namespace std;
 
 Vendedor::Vendedor() {}
 
-Vendedor::Vendedor(int codigoVendedor, string nombresVendedor, string apellidosVendedor, string direccion) {
+
+Vendedor::Vendedor(int codigoVendedor, string nombresVendedor, string apellidosVendedor, string dniVendedor) {
     this->codigoVendedor = codigoVendedor;
     this->nombresVendedor = nombresVendedor;
     this->apellidosVendedor = apellidosVendedor;
-    this->direccion = direccion;
+    this->dniVendedor = dniVendedor;
 }
 
 int Vendedor::getCodigoVendedor() {
@@ -39,10 +40,11 @@ void Vendedor::setApellidosVendedor(string apellidosVendedor) {
     Vendedor::apellidosVendedor = apellidosVendedor;
 }
 
-string Vendedor::getDireccion() {
-    return direccion;
+string Vendedor::getDniVendedor() {
+    return dniVendedor;
 }
 
-void Vendedor::setDireccion(string direccion) {
-    Vendedor::direccion = direccion;
+void Vendedor::setDniVendedor(string dniVendedor) {
+    Vendedor::dniVendedor = dniVendedor;
 }
+

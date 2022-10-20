@@ -2,13 +2,15 @@
 // Created by eceledon on 5/10/2022.
 //
 #include <iostream>
+#include <iostream>
 #include <string>
 #include <cstdlib>
 #include <conio.h>
-using namespace std;
 
-#define USER "Toxica"
+#define USER "Roberto"
 #define Pass "123456"
+
+using namespace std;
 
 #include "Login.h"
 
@@ -25,7 +27,7 @@ int Login::login(){
             cout<<"\n\tUsuario: ";
             getline(cin, usuario);
             cout<<"\tPasssword: ";
-            // getline(cin, password);
+            //getline(cin, password);
             char caracter;
             caracter = getch();
 
@@ -40,7 +42,7 @@ int Login::login(){
             if(usuario == USER && password == Pass){
                 ingresa = true;
             }   else{
-                cout<<"El usuario y/o pasword son incorrectos"<<endl;
+                cout<<"\n\tEl usuario y/o pasword son incorrectos"<<endl;
                 cin.get();
             }
         }while (ingresa == false && contador <3);
@@ -51,7 +53,9 @@ int Login::login(){
             cout<<"\n\tBienvenido al sistema"<<endl;
         }
 
+
         cin.get();
+
         return 0;
 
     }

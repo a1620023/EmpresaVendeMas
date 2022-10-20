@@ -13,13 +13,13 @@ private:
     int codigoVendedor;
     string nombresVendedor;
     string apellidosVendedor;
-    string direccion;
+    string dniVendedor;
 
 
 public:
     Vendedor();
 
-    Vendedor(int codigoVendedor, string nombresVendedor, string apellidosVendedor, string direccion);
+    Vendedor(int codigoVendedor, string nombresVendedor, string apellidosVendedor, string dniVendedor);
 
 
     int getCodigoVendedor();
@@ -34,9 +34,9 @@ public:
 
     void setApellidosVendedor(string apellidosVendedor);
 
-    string getDireccion();
+    string getDniVendedor();
 
-    void setDireccion(string direccion);
+    void setDniVendedor(string dniVendedor);
 };
 
 

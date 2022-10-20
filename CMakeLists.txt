@@ -3,4 +3,4 @@ project(EmpresaVentaMas)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(EmpresaVentaMas main.cpp Model/Clientes/Cliente.cpp Model/Clientes/Cliente.h Model/Vendedores/Vendedor.cpp Model/Vendedores/Vendedor.h Model/Productos/Producto.cpp Model/Productos/Producto.h Model/Ventas/Venta.cpp Model/Ventas/Venta.h Controller/Login/Login.cpp Controller/Login/Login.h Controller/ClienteController.cpp Controller/ClienteController.h Controller/ProductoController.cpp Controller/ProductoController.h)
+add_executable(EmpresaVentaMas main.cpp Model/Cliente.cpp Model/Vendedores/Vendedor.cpp Model/Vendedores/Vendedor.h Model/Producto.cpp Model/Ventas/Venta.cpp Model/Ventas/Venta.h Controller/Login/Login.cpp Controller/Login/Login.h Controller/ProductoController.cpp Controller/ProductoController.h Controller/VendedorController.cpp Controller/VendedorController.h Controller/ClienteController.cpp)
