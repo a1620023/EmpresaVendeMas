@@ -1,11 +1,13 @@
 #include <iostream>
-#include <cstdlib>
 #include <string>
+#include <conio.h>
+#include "Controller/Login/Login.cpp"
 #include "Controller/ClienteController.cpp"
 #include "Controller/ProductoController.cpp"
 
 using namespace std;
 
+int login();
 void menuDeOpciones();
 void registrarClienteItems();
 void registrarProductoItems();
@@ -16,8 +18,56 @@ void listarItemProductos();
 ClienteController* clienteController = new ClienteController();
 ProductoController* productoController = new ProductoController();
 int main(){
-    //Login().login();
-    menuDeOpciones();
+    login();
+    //menuDeOpciones();
+}
+
+int login(){
+    {
+        string usuario, password;
+        int contador = 0;
+        bool ingresa = false;
+
+        do{
+            system("cls");
+            cout<<"\t\t\tLOGIN DE USUSARIO" <<endl;
+            cout<<"\t\t\t-----------------" <<endl;
+            cout<<"\n\tUsuario: ";
+            getline(cin, usuario);
+            cout<<"\tPasssword: ";
+            //getline(cin, password);
+            char caracter;
+            caracter = getch();
+
+            password = "";
+
+            while(caracter != 13){
+                password.push_back(caracter);
+                cout<<"*";
+                caracter = getch();
+            }
+
+            if(usuario == Login().getUser() && password == Login().getPassword()){
+                ingresa = true;
+            }   else{
+                cout<<"\n\tEl usuario y/o pasword son incorrectos"<<endl;
+                cin.get();
+            }
+        }while (ingresa == false && contador <3);
+
+        if(ingresa == false) {
+            cout<<"\n\tUsted no pudo ingresar al sistema. ADIOS"<<endl;
+        }else{
+            cout<<"\n\tBienvenido al sistema"<<endl;
+            menuDeOpciones();
+        }
+
+
+        cin.get();
+
+        return 0;
+
+    }
 }
 
 void menuDeOpciones()

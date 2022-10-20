@@ -1,62 +1,26 @@
 //
 // Created by eceledon on 5/10/2022.
 //
-#include <iostream>
-#include <iostream>
 #include <string>
-#include <cstdlib>
-#include <conio.h>
-
-#define USER "Roberto"
-#define Pass "123456"
-
 using namespace std;
 
-#include "Login.h"
 
-int Login::login(){
-    {
-        string usuario, password;
-        int contador = 0;
-        bool ingresa = false;
+#define USER "Roberto"
+#define PASS "123456"
 
-        do{
-            system("cls");
-            cout<<"\t\t\tLOGIN DE USUSARIO" <<endl;
-            cout<<"\t\t\t-----------------" <<endl;
-            cout<<"\n\tUsuario: ";
-            getline(cin, usuario);
-            cout<<"\tPasssword: ";
-            //getline(cin, password);
-            char caracter;
-            caracter = getch();
+class Login {
+private:
+    string user = USER;
+    string pass = PASS;
 
-            password = "";
+public:
+    Login(){}
 
-            while(caracter != 13){
-                password.push_back(caracter);
-                cout<<"*";
-                caracter = getch();
-            }
-
-            if(usuario == USER && password == Pass){
-                ingresa = true;
-            }   else{
-                cout<<"\n\tEl usuario y/o pasword son incorrectos"<<endl;
-                cin.get();
-            }
-        }while (ingresa == false && contador <3);
-
-        if(ingresa == false) {
-            cout<<"\n\tUsted no pudo ingresar al sistema. ADIOS"<<endl;
-        }else{
-            cout<<"\n\tBienvenido al sistema"<<endl;
-        }
-
-
-        cin.get();
-
-        return 0;
-
+    string getUser() {
+        return user;
     }
-}
+
+    string getPassword() {
+        return pass;
+    }
+};
