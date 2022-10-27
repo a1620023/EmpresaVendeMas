@@ -132,6 +132,8 @@ void registrarProductoItems(){
     string nombreProducto = "Pasta";
     string descripcionProducto;
     float precioProducto;
+    int stockProducto;
+    int codigoCategoria;
 
     do {
         codigoProducto = productoController->getCorrelativo();
@@ -143,10 +145,14 @@ void registrarProductoItems(){
         getline(cin, descripcionProducto);
         cout<<"Precio: ";
         cin>>precioProducto;
+        cout<<"Stock: ";
+        cin>>stockProducto;
+        cout<<"Codigo de Categoria: ";
+        cin>>codigoCategoria;
         cout<<"Continuar(S/s):";
         cin>>flag;
 
-        Producto objProducto(codigoProducto, nombreProducto, descripcionProducto, precioProducto);
+        Producto objProducto(codigoProducto, nombreProducto, descripcionProducto, precioProducto, stockProducto, codigoCategoria);
         productoController->registrarProducto(objProducto);
 
         productoController->guardarEnArchivo(objProducto);
@@ -171,7 +177,8 @@ void listarItemProductos(){
     for(int i = 0;i<productoController->size();i++)
     {
         cout<<productoController->getPosicion(i).getCodigoProducto() <<"\t"<<productoController->getPosicion(i).getNombreProducto()<<"\t"
-            <<productoController->getPosicion(i).getDescripcionProducto()<<"\t"<<productoController->getPosicion(i).getPrecioProducto()<<"\t"<<endl;
+            <<productoController->getPosicion(i).getDescripcionProducto()<<"\t"<<productoController->getPosicion(i).getPrecioProducto()<<"\t"<<
+            productoController->getPosicion(i).getStockProducto()<<"\t"<<productoController->getPosicion(i).getCodigoCategoria()<<"\t"<<endl;
     }
 
     system("pause");

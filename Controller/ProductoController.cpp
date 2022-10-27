@@ -40,7 +40,8 @@ public:
             archivoProducto.open("Productos.csv", ios::app);
             if (archivoProducto.is_open()){
                 archivoProducto <<objetoProducto.getCodigoProducto() <<";"<< objetoProducto.getNombreProducto() <<";"<<
-                objetoProducto.getDescripcionProducto() <<";"<< objetoProducto.getPrecioProducto() <<";"<<endl;
+                objetoProducto.getDescripcionProducto() <<";"<< objetoProducto.getPrecioProducto() <<";"<<
+                objetoProducto.getStockProducto() <<";"<< objetoProducto.getCodigoCategoria() <<";"<<endl;
                 archivoProducto.close();
             }
         } catch (exception e) {
@@ -66,7 +67,7 @@ public:
                         ++i;
                     }
 
-                    Producto objProd(stoi(arregloTemporal[0]), arregloTemporal[1], arregloTemporal[2], stoi(arregloTemporal[3]));
+                    Producto objProd(stoi(arregloTemporal[0]), arregloTemporal[1], arregloTemporal[2], stoi(arregloTemporal[3]), stoi(arregloTemporal[4]), stoi(arregloTemporal[5]));
                     registrarProducto(objProd);
                 }
             }
