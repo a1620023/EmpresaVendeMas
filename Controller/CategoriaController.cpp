@@ -67,7 +67,7 @@ public:
                         ++i;
                     }
 
-                    Categoria objCat(stoi(arregloTemporal[0]), arregloTemporal[1]));
+                    Categoria objCat(stoi(arregloTemporal[0]), arregloTemporal[1]);
                     registrarCategoria(objCat);
                 }
             }

@@ -2,6 +2,7 @@
 #include <string>
 #include <conio.h>
 #include "Controller/Login/Login.cpp"
+#include "Controller/CategoriaController.cpp"
 #include "Controller/ClienteController.cpp"
 #include "Controller/ProductoController.cpp"
 
@@ -9,12 +10,15 @@ using namespace std;
 
 int login();
 void menuDeOpciones();
+void registrarCategoriasItems();
 void registrarClienteItems();
 void registrarProductoItems();
+void listarItemCategorias();
 void listarItemClientes();
 void listarItemProductos();
 
 
+CategoriaController* categoriaController = new CategoriaController();
 ClienteController* clienteController = new ClienteController();
 ProductoController* productoController = new ProductoController();
 int main(){
@@ -76,23 +80,49 @@ void menuDeOpciones()
     do
     {
         cout<<"MENU DE OPCIONES\n";
-        cout<<"::           Agregar Productos:  [1]\n";
-        cout<<"::           Agregar Cliente  :  [2]\n";
-        cout<<"::           Listar Productos :  [3]\n";
-        cout<<"::           Listar Clientes  :  [4]\n";
-        cout<<"::           Salir            :  [5]\n";
+        cout<<"::           Agregar Categorias:  [1]\n";
+        cout<<"::           Agregar Productos:  [2]\n";
+        cout<<"::           Agregar Cliente  :  [3]\n";
+        cout<<"::           Listar Categorias :  [4]\n";
+        cout<<"::           Listar Productos :  [5]\n";
+        cout<<"::           Listar Clientes  :  [6]\n";
+        cout<<"::           Salir            :  [00]\n";
         cout<<"Escriba la opcion:";
         cin>>opt;
         switch(opt)
-        {   case 1:system("cls");registrarProductoItems();break;
-            case 2:system("cls");registrarClienteItems();break;
-            case 3:system("cls");listarItemProductos();break;
-            case 4:system("cls");listarItemClientes();break;
-            case 5:cout<<"Gracias por usar nuestro programa\n";break;
-            default:system("cls");cout<<"Escriba una opcion correcta | 1 -> 5 |\n";
+        {   case 1:system("cls");registrarCategoriasItems();break;
+            case 2:system("cls");registrarProductoItems();break;
+            case 3:system("cls");registrarClienteItems();break;
+            case 4:system("cls");listarItemCategorias();break;
+            case 5:system("cls");listarItemProductos();break;
+            case 6:system("cls");listarItemClientes();break;
+            case 00:cout<<"Gracias por usar nuestro programa\n";break;
+            default:system("cls");cout<<"Escriba una opcion correcta | 1 -> 6 |\n";
         }
     }
     while(opt!=5);
+}
+
+void registrarCategoriasItems(){
+    string flag;
+    int codigoCategoria;
+    string nombreCategoria;
+
+    do {
+        codigoCategoria = clienteController->getCorrelativo();
+        cout<<"**********("<<codigoCategoria<<")************\n";
+        cin.ignore();
+        cout<<"Nombres: ";
+        getline(cin, nombreCategoria);
+        cout<<"Continuar(S/s):";
+        cin>>flag;
+
+        Categoria objCategoria(codigoCategoria, nombreCategoria);
+        categoriaController->registrarCategoria(objCategoria);
+
+        categoriaController->guardarEnArchivo(objCategoria);
+        system("cls");
+    } while (flag == "S" || flag == "s");
 }
 
 void registrarClienteItems(){
@@ -158,6 +188,17 @@ void registrarProductoItems(){
         productoController->guardarEnArchivo(objProducto);
         system("cls");
     } while (flag == "S" || flag == "s");
+}
+
+void listarItemCategorias(){
+    cout<<"...listando Clientes"<<endl;
+    for(int i = 0;i<categoriaController->size();i++)
+    {
+        cout<<categoriaController->getPosicion(i).getCodigoCategoria() <<"\t"<<categoriaController->getPosicion(i).getNombreCategoria()<<"\t"<<endl;
+    }
+
+    system("pause");
+    system("cls");
 }
 
 void listarItemClientes(){

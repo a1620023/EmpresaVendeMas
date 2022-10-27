@@ -121,8 +121,7 @@
 			[
 				3,
 				6,
-				10,
-				14
+				10
 			]
 		}
 	],
@@ -208,11 +207,6 @@
 			"compileGroupIndex" : 0,
 			"path" : "Controller/CategoriaController.cpp",
 			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "Controller/CategoriaController.h",
-			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"

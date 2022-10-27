@@ -85,9 +85,6 @@
 		<Unit filename="F:/USIL/ING SOFTWARE/2022-2/POO-2/EmpresaVendeMas/Controller/CategoriaController.cpp">
 			<Option target="EmpresaVentaMas"/>
 		</Unit>
-		<Unit filename="F:/USIL/ING SOFTWARE/2022-2/POO-2/EmpresaVendeMas/Controller/CategoriaController.h">
-			<Option target="EmpresaVentaMas"/>
-		</Unit>
 		<Unit filename="F:/USIL/ING SOFTWARE/2022-2/POO-2/EmpresaVendeMas/Controller/ClienteController.cpp">
 			<Option target="EmpresaVentaMas"/>
 		</Unit>
