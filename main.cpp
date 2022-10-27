@@ -18,8 +18,8 @@ void listarItemProductos();
 ClienteController* clienteController = new ClienteController();
 ProductoController* productoController = new ProductoController();
 int main(){
-    login();
-    //menuDeOpciones();
+    //login();
+    menuDeOpciones();
 }
 
 int login(){
