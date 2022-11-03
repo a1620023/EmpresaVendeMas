@@ -8,7 +8,7 @@
 
 using namespace std;
 
-int login();
+
 void menuDeOpciones();
 void registrarCategoriasItems();
 void registrarClienteItems();
@@ -21,58 +21,14 @@ void listarItemProductos();
 CategoriaController* categoriaController = new CategoriaController();
 ClienteController* clienteController = new ClienteController();
 ProductoController* productoController = new ProductoController();
+Login* d = new Login();
+
 int main(){
     //login();
+    d->log();
     menuDeOpciones();
 }
 
-int login(){
-    {
-        string usuario, password;
-        int contador = 0;
-        bool ingresa = false;
-
-        do{
-            system("cls");
-            cout<<"\t\t\tLOGIN DE USUSARIO" <<endl;
-            cout<<"\t\t\t-----------------" <<endl;
-            cout<<"\n\tUsuario: ";
-            getline(cin, usuario);
-            cout<<"\tPasssword: ";
-            //getline(cin, password);
-            char caracter;
-            caracter = getch();
-
-            password = "";
-
-            while(caracter != 13){
-                password.push_back(caracter);
-                cout<<"*";
-                caracter = getch();
-            }
-
-            if(usuario == Login().getUser() && password == Login().getPassword()){
-                ingresa = true;
-            }   else{
-                cout<<"\n\tEl usuario y/o pasword son incorrectos"<<endl;
-                cin.get();
-            }
-        }while (ingresa == false && contador <3);
-
-        if(ingresa == false) {
-            cout<<"\n\tUsted no pudo ingresar al sistema. ADIOS"<<endl;
-        }else{
-            cout<<"\n\tBienvenido al sistema"<<endl;
-            menuDeOpciones();
-        }
-
-
-        cin.get();
-
-        return 0;
-
-    }
-}
 
 void menuDeOpciones()
 {
@@ -80,13 +36,13 @@ void menuDeOpciones()
     do
     {
         cout<<"MENU DE OPCIONES\n";
-        cout<<"::           Agregar Categorias:  [1]\n";
-        cout<<"::           Agregar Productos:  [2]\n";
-        cout<<"::           Agregar Cliente  :  [3]\n";
-        cout<<"::           Listar Categorias :  [4]\n";
-        cout<<"::           Listar Productos :  [5]\n";
-        cout<<"::           Listar Clientes  :  [6]\n";
-        cout<<"::           Salir            :  [00]\n";
+        cout<<"::           Agregar Categorias  :  [1]\n";
+        cout<<"::           Agregar Productos   :  [2]\n";
+        cout<<"::           Agregar Cliente     :  [3]\n";
+        cout<<"::           Listar Categorias   :  [4]\n";
+        cout<<"::           Listar Productos    :  [5]\n";
+        cout<<"::           Listar Clientes     :  [6]\n";
+        cout<<"::           Salir               :  [00]\n";
         cout<<"Escriba la opcion:";
         cin>>opt;
         switch(opt)
@@ -100,7 +56,7 @@ void menuDeOpciones()
             default:system("cls");cout<<"Escriba una opcion correcta | 1 -> 6 |\n";
         }
     }
-    while(opt!=5);
+    while(opt!=00);
 }
 
 void registrarCategoriasItems(){
@@ -109,7 +65,7 @@ void registrarCategoriasItems(){
     string nombreCategoria;
 
     do {
-        codigoCategoria = clienteController->getCorrelativo();
+        codigoCategoria = categoriaController->getCorrelativo();
         cout<<"**********("<<codigoCategoria<<")************\n";
         cin.ignore();
         cout<<"Nombres: ";
@@ -122,6 +78,7 @@ void registrarCategoriasItems(){
 
         categoriaController->guardarEnArchivo(objCategoria);
         system("cls");
+        listarItemCategorias();
     } while (flag == "S" || flag == "s");
 }
 
@@ -177,8 +134,11 @@ void registrarProductoItems(){
         cin>>precioProducto;
         cout<<"Stock: ";
         cin>>stockProducto;
+
         cout<<"Codigo de Categoria: ";
+        listarItemCategorias();
         cin>>codigoCategoria;
+
         cout<<"Continuar(S/s):";
         cin>>flag;
 
@@ -187,11 +147,12 @@ void registrarProductoItems(){
 
         productoController->guardarEnArchivo(objProducto);
         system("cls");
+        listarItemProductos();
     } while (flag == "S" || flag == "s");
 }
 
 void listarItemCategorias(){
-    cout<<"...listando Clientes"<<endl;
+    cout<<"...listando Categorias"<<endl;
     for(int i = 0;i<categoriaController->size();i++)
     {
         cout<<categoriaController->getPosicion(i).getCodigoCategoria() <<"\t"<<categoriaController->getPosicion(i).getNombreCategoria()<<"\t"<<endl;

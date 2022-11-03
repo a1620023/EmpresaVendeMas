@@ -8,7 +8,7 @@
 using namespace std;
 
 class CategoriaController {
-//stockProducto
+
 private:
     vector<Categoria> vectorCategoria;
 
@@ -55,7 +55,7 @@ public:
             int i;
             size_t posicion;
             string linea;
-            string arregloTemporal[4];
+            string arregloTemporal[2];
             fstream archivoCategoria;
             archivoCategoria.open("Categorias.csv", ios::in);
             if (archivoCategoria.is_open()){
