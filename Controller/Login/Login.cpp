@@ -37,9 +37,7 @@ private:
     HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
 
 public:
-    Login(){
-        log();
-    }
+
 void log() {
     int x=1000;
 
@@ -70,6 +68,7 @@ void log() {
         }
         limpia();
         menu();
+
 
     }else {
         cout<<"                                     ";
@@ -121,36 +120,22 @@ void limpia(){
     system("cls");
 }
 void menu(){
-    int opt;
-    do
-    {
-        cout<<"MENU DE OPCIONES\n";
-        cout<<"Ingresar Nuevos Productos	[1]\n";
-        cout<<"Eliminar Nuevos Productos	[2]\n";
-        cout<<"Modificar Nuevos Productos	[3]\n";
-        cout<<"Buscar Nuevos Productos	[4]\n";
-        cout<<"Listar Productos			[5]\n";
-        cout<<"Salir					[6]\n";
-        cout<<"Ingrese una opcion[1-6]:";
-        cin>>opt;
-        /*switch(opt)
-        {
-          case 1:	system("cls");
-              adicionarProductos();
-              break;
-          case 2:system("cls");eliminarProductos();break;
-          case 3:system("cls");modificarProductos();break;
-          case 4:system("cls");buscarAlumno();break;
-          case 5:	system("cls");
-              listarProductos();
-              break;
-          case 6:	cout<<"###########Gracias por tu compra##########\n";
-              exit(0);
-              break;
-          default:cout<<"Ingrese una opcion correcta[1-6]"<<endl;
-        }*/
-    }
-    while(opt!=6);
+    cout<<"USIL";
+    // int opt;
+    // do
+    // {
+    //     cout<<"MENU DE OPCIONES\n";
+    //     cout<<"Ingresar Nuevos Productos	[1]\n";
+    //     cout<<"Eliminar Nuevos Productos	[2]\n";
+    //     cout<<"Modificar Nuevos Productos	[3]\n";
+    //     cout<<"Buscar Nuevos Productos	[4]\n";
+    //     cout<<"Listar Productos			[5]\n";
+    //     cout<<"Salir					[6]\n";
+    //     cout<<"Ingrese una opcion[1-6]:";
+    //     cin>>opt;
+
+    // }
+    // while(opt!=6);
 }
 
 void encriptar(char contra2[]){
