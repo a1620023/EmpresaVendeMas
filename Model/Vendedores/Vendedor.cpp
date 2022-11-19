@@ -1,50 +1,58 @@
 //
 // Created by eceledon on 5/10/2022.
 //
-
-#include "Vendedor.h"
 #include <iostream>
 using namespace std;
 
-Vendedor::Vendedor() {}
+class Vendedor {
+
+    private:
+        int codigoVendedor;
+        string nombresVendedor;
+        string apellidosVendedor;
+        string dniVendedor;
 
 
-Vendedor::Vendedor(int codigoVendedor, string nombresVendedor, string apellidosVendedor, string dniVendedor) {
-    this->codigoVendedor = codigoVendedor;
-    this->nombresVendedor = nombresVendedor;
-    this->apellidosVendedor = apellidosVendedor;
-    this->dniVendedor = dniVendedor;
-}
+    public:
+        Vendedor() {};
 
-int Vendedor::getCodigoVendedor() {
-    return codigoVendedor;
-}
+        Vendedor(int codigoVendedor, string nombresVendedor, string apellidosVendedor, string dniVendedor) {
+        this->codigoVendedor = codigoVendedor;
+        this->nombresVendedor = nombresVendedor;
+        this->apellidosVendedor = apellidosVendedor;
+        this->dniVendedor = dniVendedor;
+        }
 
-void Vendedor::setCodigoVendedor(int codigoVendedor) {
-    Vendedor::codigoVendedor = codigoVendedor;
-}
+    int getCodigoVendedor() {
+        return codigoVendedor;
+    }
 
-string Vendedor::getNombresVendedor() {
-    return nombresVendedor;
-}
+    void setCodigoVendedor(int codigoVendedor) {
+        codigoVendedor = codigoVendedor;
+    }
 
-void Vendedor::setNombresVendedor(string nombresVendedor) {
-    Vendedor::nombresVendedor = nombresVendedor;
-}
+    string getNombresVendedor() {
+        return nombresVendedor;
+    }
 
-string Vendedor::getApellidosVendedor() {
-    return apellidosVendedor;
-}
+    void setNombresVendedor(string nombresVendedor) {
+        nombresVendedor = nombresVendedor;
+    }
 
-void Vendedor::setApellidosVendedor(string apellidosVendedor) {
-    Vendedor::apellidosVendedor = apellidosVendedor;
-}
+    string getApellidosVendedor() {
+        return apellidosVendedor;
+    }
 
-string Vendedor::getDniVendedor() {
-    return dniVendedor;
-}
+    void setApellidosVendedor(string apellidosVendedor) {
+        apellidosVendedor = apellidosVendedor;
+    }
 
-void Vendedor::setDniVendedor(string dniVendedor) {
-    Vendedor::dniVendedor = dniVendedor;
-}
+    string getDniVendedor() {
+        return dniVendedor;
+    }
 
+    void setDniVendedor(string dniVendedor) {
+        dniVendedor = dniVendedor;
+    }
+
+};

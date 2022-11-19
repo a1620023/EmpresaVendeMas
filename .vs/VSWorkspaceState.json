@@ -1,0 +1,16 @@
+{
+  "OutputFoldersPerTargetSystem": {
+    "Máquina local": [
+      "out\\build\\x64-Debug",
+      "out\\install\\x64-Debug"
+    ]
+  },
+  "ExpandedNodes": [
+    "",
+    "\\Controller",
+    "\\Model",
+    "\\Model\\Vendedores"
+  ],
+  "SelectedNode": "\\Controller\\ProductoController.cpp",
+  "PreviewInSolutionExplorer": false
+}

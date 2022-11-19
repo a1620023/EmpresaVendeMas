@@ -3,20 +3,25 @@
 //
 
 #include <fstream>
-#include "VendedorController.h"
-#include "../Model/Vendedores/Vendedor.h"
+#include <string>
+#include <vector>
+#include "../Model/Vendedores/Vendedor.cpp"
 
 
+class VendedorController {
+private:
+    vector<Vendedor> vectorVendedor;
 
-VendedorController::VendedorController() {}
+public:
+VendedorController() {}
 
-void VendedorController::registarVendedor(Vendedor objVendedor) {}
+void registarVendedor(Vendedor objVendedor) {}
 
-int VendedorController::size() {
+int size() {
     return vectorVendedor.size();
 }
 
-int VendedorController::getCorrelativo() {
+int getCorrelativo() {
     if (size() == 0){
         return 1;
     } else {
@@ -80,4 +85,4 @@ void cargarDatosDelArchivoAlVector()
 
 
 
-
+};
