@@ -3,7 +3,6 @@
 //
 
 #include <fstream>
-#include <string>
 #include <vector>
 #include "../Model/Vendedores/Vendedor.cpp"
 
@@ -16,6 +15,8 @@ public:
 VendedorController() {}
 
 void registarVendedor(Vendedor objVendedor) {}
+
+Vendedor getVendedor(int posicion);
 
 int size() {
     return vectorVendedor.size();
@@ -83,6 +84,6 @@ void cargarDatosDelArchivoAlVector()
     }
 }
 
-
-
 };
+
+

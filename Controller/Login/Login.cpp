@@ -67,7 +67,7 @@ void log() {
             Sleep(x);
         }
         limpia();
-        menu();
+        //menu();
 
 
     }else {

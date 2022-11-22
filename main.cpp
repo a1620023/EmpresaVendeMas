@@ -5,6 +5,7 @@
 #include "Controller/CategoriaController.cpp"
 #include "Controller/ClienteController.cpp"
 #include "Controller/ProductoController.cpp"
+#include "Controller/VentaController.cpp"
 
 using namespace std;
 
@@ -18,14 +19,15 @@ void listarItemClientes();
 void listarItemProductos();
 
 
+Login* d = new Login();
 CategoriaController* categoriaController = new CategoriaController();
 ClienteController* clienteController = new ClienteController();
 ProductoController* productoController = new ProductoController();
-Login* d = new Login();
-
+VentaController* ventaController = new VentaController();
+ 
 int main(){
     //login();
-    d->log();
+    //d->log();
     menuDeOpciones();
 }
 
@@ -148,6 +150,60 @@ void registrarProductoItems(){
         productoController->guardarEnArchivo(objProducto);
         system("cls");
         listarItemProductos();
+    } while (flag == "S" || flag == "s");
+}
+
+void registrarVentasItems(){
+    string flag;
+    int codigoVenta;
+    int codigoCliente;
+    int codigoVendedor;
+    string fechaVenta;
+    float totalVenta;
+
+    do {
+        codigoVenta = ventaController->getCorrelativo();
+        cout<<"**********("<<codigoVenta<<")************\n";
+        cin.ignore();
+        cout<<"Codigo de Cliente: ";
+        cin>>codigoCliente; //busqueda por nombre
+        cout<<"Codigo de Vendedor: ";
+        cin>>codigoVendedor; //seleccionar
+        cout<<"Fecha de Venta: ";
+        getline(cin, fechaVenta);
+        cout<<"Continuar(S/s):";
+        cin>>flag;
+
+        Categoria objCategoria(codigoVenta, "2");
+        categoriaController->registrarCategoria(objCategoria);
+
+        categoriaController->guardarEnArchivo(objCategoria);
+        system("cls");
+        listarItemCategorias();
+    } while (flag == "S" || flag == "s");
+}
+
+void registrarDetalleVentaItems(){
+    string flag;
+    int codigoVenta;
+    int codigoCliente;
+    string nombreCategoria;
+
+    do {
+        codigoVenta = ventaController->getCorrelativo();
+        cout<<"**********("<<codigoVenta<<")************\n";
+        cin.ignore();
+        cout<<"Nombres: ";
+        getline(cin, nombreCategoria);
+        cout<<"Continuar(S/s):";
+        cin>>flag;
+
+        Categoria objCategoria(codigoVenta, nombreCategoria);
+        categoriaController->registrarCategoria(objCategoria);
+
+        categoriaController->guardarEnArchivo(objCategoria);
+        system("cls");
+        listarItemCategorias();
     } while (flag == "S" || flag == "s");
 }
 

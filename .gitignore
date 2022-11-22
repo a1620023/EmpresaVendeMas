@@ -7,6 +7,7 @@
 *.o
 *.obj
 
+
 # Precompiled Headers
 *.gch
 *.pch
@@ -30,3 +31,13 @@
 *.exe
 *.out
 *.app
+
+# IDes
+*.idea
+*.vs
+
+# Production Files
+cmake-build-relwithdebinfo/*.csv
+cmake-build-relwithdebinfo/*.txt
+cmake-build-relwithdebinfo/*.csv
+*.vs

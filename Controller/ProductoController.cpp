@@ -2,7 +2,6 @@
 // Created by eceledon on 5/10/2022.
 //
 #include <fstream>
-#include <string>
 #include <vector>
 #include "../Model/Producto.cpp"
 
