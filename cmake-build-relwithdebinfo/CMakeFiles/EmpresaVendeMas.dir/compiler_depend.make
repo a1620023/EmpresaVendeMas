@@ -136,6 +136,11 @@ CMakeFiles/EmpresaVendeMas.dir/main.cpp.obj: ../main.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/istream.tcc \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/x86_64-w64-mingw32/include/conio.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/x86_64-w64-mingw32/include/sec_api/conio_s.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/chrono \
+  C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ratio \
+  C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/limits \
+  C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ctime \
+  C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/parse_numbers.h \
   ../Controller/Login/Login.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/x86_64-w64-mingw32/include/windows.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/x86_64-w64-mingw32/include/sdkddkver.h \
@@ -374,6 +379,8 @@ CMakeFiles/EmpresaVendeMas.dir/main.cpp.obj: ../main.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_bvector.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/vector.tcc \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bitset \
+  ../Controller/VendedorController.cpp \
+  ../Model/Vendedores/Vendedor.cpp \
   ../Controller/CategoriaController.cpp \
   ../Model/Categoria.cpp \
   ../Controller/ClienteController.cpp \
@@ -381,7 +388,9 @@ CMakeFiles/EmpresaVendeMas.dir/main.cpp.obj: ../main.cpp \
   ../Controller/ProductoController.cpp \
   ../Model/Producto.cpp \
   ../Controller/VentaController.cpp \
-  ../Model/Venta.cpp
+  ../Model/Venta.cpp \
+  ../Controller/DetalleVentaController.cpp \
+  ../Model/DetalleVenta.cpp
 
 
 C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stringfwd.h:
@@ -586,6 +595,8 @@ C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32
 
 C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/atomicity.h:
 
+../Controller/VendedorController.cpp:
+
 C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/avx512cdintrin.h:
@@ -776,6 +787,22 @@ C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/x86_64-w64-mingw32/include
 
 C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/x86_64-w64-mingw32/include/sec_api/conio_s.h:
 
+C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/x86_64-w64-mingw32/include/pshpack4.h:
+
+C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/chrono:
+
+C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ratio:
+
+C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_vector.h:
+
+C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/limits:
+
+C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ctime:
+
+C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/rdseedintrin.h:
+
+C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/parse_numbers.h:
+
 C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/x86_64-w64-mingw32/include/sysinfoapi.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/xsavesintrin.h:
@@ -852,6 +879,8 @@ C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32
 
 C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/clzerointrin.h:
 
+../Model/Vendedores/Vendedor.cpp:
+
 C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/lzcntintrin.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/mwaitxintrin.h:
@@ -863,8 +892,6 @@ C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32
 C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/x86_64-w64-mingw32/include/dde.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/pkuintrin.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/rdseedintrin.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/x86_64-w64-mingw32/include/oleidl.h:
 
@@ -963,8 +990,6 @@ C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/x86_64-w64-mingw32/include
 C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/ammintrin.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/xopintrin.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/x86_64-w64-mingw32/include/pshpack4.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/x86_64-w64-mingw32/include/tvout.h:
 
@@ -1128,12 +1153,14 @@ C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32
 
 C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/fstream.tcc:
 
-C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_vector.h:
-
 C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_bvector.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/vector.tcc:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bitset:
 
+../Model/DetalleVenta.cpp:
+
 ../Controller/VentaController.cpp:
+
+../Controller/DetalleVentaController.cpp:

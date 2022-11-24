@@ -7,56 +7,66 @@ private:
     int codigoCliente;
     int codigoVendedor;
     string fechaVenta;
-    float totalVenta;
+    long totalVenta;
+    int estadoVenta;
 
 public:
-    Venta()
-    {
-
-    }
-    ~Venta() {}
-
-    void setCodigoVenta(int codigoVenta)
-    {
-        codigoVenta = codigoVenta;
-    }
-    void setCodigoCliente(int codigoCliente)
-    {
-        codigoCliente = codigoCliente;
-    }
-    void setCodigoVendedor(int codigoVendedor)
-    {
-        codigoVendedor = codigoVendedor;
-    }
-    void setFechaVenta(string fechaVenta)
-    {
-        fechaVenta = fechaVenta;
-    }
-    void setTotalVenta(float totalVenta)
-    {
-        totalVenta = totalVenta;
+    Venta() {}
+    Venta(int codigoVenta, int codigoCliente, int codigoVendedor, string fechaVenta, long totalVenta, int estadoVenta) {
+        this->codigoVenta = codigoVenta;
+        this->codigoCliente = codigoCliente;
+        this->codigoVendedor = codigoVendedor;
+        this->fechaVenta = fechaVenta;
+        this->totalVenta = totalVenta;
+        this->estadoVenta = estadoVenta;
     }
 
-    int getCodigoCliente()
-    {
-        return this->codigoCliente;
-    }
-    int getCodigoVendedor()
-    {
-        return this->codigoVendedor;
+    void setCodigoVenta(int codigoVenta) {
+        this->codigoVenta = codigoVenta;
     }
 
-    string getFechaVenta()
-    {
-        return this->fechaVenta;
+    void setCodigoCliente(int codigoCliente) {
+        this->codigoCliente = codigoCliente;
     }
-    int getCodigoVenta()
-    {
-        return this->codigoVenta;
+
+    void setCodigoVendedor(int codigoVendedor) {
+        this->codigoVendedor = codigoVendedor;
     }
-    float getTotalVenta()
-    {
-        return this->totalVenta;
+
+    void setFechaVenta(string fechaVenta) {
+        this->fechaVenta = fechaVenta;
+    }
+
+    void setTotalVenta(long totalVenta) {
+        this->totalVenta = totalVenta;
+    }
+
+    int getCodigoCliente() {
+        return codigoCliente;
+    }
+
+    int getCodigoVendedor() {
+        return codigoVendedor;
+    }
+
+    string getFechaVenta() {
+        return fechaVenta;
+    }
+
+    int getCodigoVenta() {
+        return codigoVenta;
+    }
+
+    long getTotalVenta() {
+        return totalVenta;
+    }
+
+    int getEstadoVenta() {
+        return estadoVenta;
+    }
+
+    void setEstadoVenta(int estadoVenta) {
+        this->estadoVenta = estadoVenta;
     }
 
 };

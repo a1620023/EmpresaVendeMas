@@ -8,7 +8,7 @@ class Cliente {
 private:
     int codigoCliente;
     string nombresCliente;
-    string apellidosCliente ="Celedonio";
+    string apellidosCliente;
     string dniCliente;
     string edadCliente;
 
@@ -28,7 +28,7 @@ public:
     }
 
     void setCodigoCliente(int codigoCliente) {
-        codigoCliente = codigoCliente;
+        this->codigoCliente = codigoCliente;
     }
 
     string getNombresCliente() {
@@ -36,7 +36,7 @@ public:
     }
 
     void setNombresCliente(string nombresCliente) {
-        nombresCliente = nombresCliente;
+        this->nombresCliente = nombresCliente;
     }
 
     string getApellidosCliente() {
@@ -44,7 +44,23 @@ public:
     }
 
     void setApellidosCliente(string apellidosCliente) {
-        apellidosCliente = apellidosCliente;
+        this->apellidosCliente = apellidosCliente;
+    }
+
+    const string getDniCliente() const {
+        return dniCliente;
+    }
+
+    void setDniCliente(const string &dniCliente) {
+        this->dniCliente = dniCliente;
+    }
+
+    const string getEdadCliente() const {
+        return edadCliente;
+    }
+
+    void setEdadCliente(const string &edadCliente) {
+        this->edadCliente = edadCliente;
     }
 
 };

@@ -11,7 +11,7 @@ private:
 
 public:
     ClienteController(){
-        cargarDatosDelArchivoAlVector();
+        //cargarDatosDelArchivoAlVector();
     }
     void registrarCliente(Cliente objCliente) {
         vectorCliente.push_back(objCliente);
@@ -33,6 +33,77 @@ public:
         }
     }
 
+    void buscarPorDocumento(string datoDeBusqueda){
+        int codigoCliente;
+        string nombresCliente;
+        string apellidosCliente;
+        string dniCliente;
+        string edadCliente;
+        bool registroEncontrado = false;
+
+        cout << "Buscando... : "<< datoDeBusqueda << endl;
+
+        fstream lectura;
+        lectura.open("Clientes.csv", ios::in);
+
+        while (!lectura.eof() && !registroEncontrado){
+            lectura>>codigoCliente >>nombresCliente >>apellidosCliente >>dniCliente >>edadCliente;
+
+            if(dniCliente == datoDeBusqueda){
+                cout << "Codigo----------: "<< codigoCliente << endl;
+                cout << "Nombres---------: "<< nombresCliente << endl;
+                cout << "Apellidos-------: "<< apellidosCliente << endl;
+                cout << "DNI-------------: "<< dniCliente << endl;
+                cout << "Edad------------: "<< edadCliente << endl;
+                cout << "-------------------------------------------" << endl;
+                registroEncontrado = true;
+            }
+            //lectura>>nombresCliente;
+        }
+        lectura.close();
+        if(!registroEncontrado){
+            cout << "====== Registro no encontrado ======" << endl;
+        }
+        system("pause");
+    }
+
+    string buscarCodigoCliente(string buscarDNI) {
+        int codigoCliente;
+        string nombresCliente;
+        string apellidosCliente;
+        string dniCliente;
+        string edadCliente;
+        //bool registroEncontrado = false;
+
+        ifstream Leer;
+        system("cls");
+        Leer.open("Clientes.csv");
+        Leer>>codigoCliente >>nombresCliente >>apellidosCliente >>dniCliente >>edadCliente;
+        bool encontrado = false;
+        //cout<<"Ingrese su numero de cedula para buscar"<<endl;
+        //cin>>buscarDNI;
+        while(!Leer.eof()) {
+            Leer>>dniCliente;
+            if(dniCliente==buscarDNI) {
+                encontrado=true;
+                cout<<"----------------------------"<<endl;
+                cout<<"Codigo:    "<<codigoCliente<<endl;
+                cout<<"Nombre:    "<<nombresCliente<<endl;
+                cout<<"Apellido:  "<<apellidosCliente<<endl;
+                cout<<"dniCliente:      "<<dniCliente<<" anio"<<endl;
+                cout<<"edadCliente:  "<<edadCliente<<endl;
+                cout<<"----------------------------"<<endl;
+                cout<<endl;
+            }
+            Leer>>codigoCliente >>nombresCliente >>apellidosCliente >>dniCliente >>edadCliente;
+        }
+        if(encontrado==false) {
+            cout<<"DNI no encontrado"<<endl;
+        }
+        Leer.close();
+        //buscarPorDocumento(codigo);
+    }
+
     void guardarEnArchivo(Cliente objCliente) {
         cout << "...guardando cliente" << endl;
         try {
@@ -40,7 +111,8 @@ public:
             archivoCliente.open("Clientes.csv", ios::app);
             if (archivoCliente.is_open()) {
                 archivoCliente << objCliente.getCodigoCliente() << ";" << objCliente.getNombresCliente() << ";"
-                               << objCliente.getApellidosCliente() << ";" << endl;
+                               << objCliente.getApellidosCliente() << ";" << objCliente.getDniCliente() << ";"
+                               << objCliente.getEdadCliente() << ";" << endl;
                 archivoCliente.close();
             }
         } catch (exception e) {

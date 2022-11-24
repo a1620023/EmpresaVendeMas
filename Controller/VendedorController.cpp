@@ -14,9 +14,13 @@ private:
 public:
 VendedorController() {}
 
-void registarVendedor(Vendedor objVendedor) {}
+void registarVendedor(Vendedor objVendedor) {
+    vectorVendedor.push_back(objVendedor);
+}
 
-Vendedor getVendedor(int posicion);
+Vendedor getPosicion(int posicion) {
+    return vectorVendedor[posicion];
+};
 
 int size() {
     return vectorVendedor.size();
@@ -50,10 +54,9 @@ void grabarEnArchivo(Vendedor obj)
 
 void cargarDatosDelArchivoAlVector()
 {
-    try
-    {
+    try{
         int 	i;
-        size_t 	posi;
+        size_t 	posicion;
         string 	linea;
         string 	temporal[4];
         fstream	archivoVendedor;
@@ -63,10 +66,10 @@ void cargarDatosDelArchivoAlVector()
             while(!archivoVendedor.eof() && getline(archivoVendedor,linea))
             {
                 i = 0;
-                while((posi = linea.find(";")) != string::npos)
+                while((posicion = linea.find(";")) != string::npos)
                 {
-                    temporal[i] = linea.substr(0,posi);
-                    linea.erase(0,posi+1);
+                    temporal[i] = linea.substr(0,posicion);
+                    linea.erase(0,posicion+1);
                     ++i;
                 }
 

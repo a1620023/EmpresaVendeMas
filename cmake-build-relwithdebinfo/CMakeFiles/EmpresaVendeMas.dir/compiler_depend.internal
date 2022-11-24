@@ -137,6 +137,11 @@ CMakeFiles/EmpresaVendeMas.dir/main.cpp.obj
  C:/Program Files/JetBrains/CLion 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/istream.tcc
  C:/Program Files/JetBrains/CLion 2022.1.3/bin/mingw/x86_64-w64-mingw32/include/conio.h
  C:/Program Files/JetBrains/CLion 2022.1.3/bin/mingw/x86_64-w64-mingw32/include/sec_api/conio_s.h
+ C:/Program Files/JetBrains/CLion 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/chrono
+ C:/Program Files/JetBrains/CLion 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ratio
+ C:/Program Files/JetBrains/CLion 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/limits
+ C:/Program Files/JetBrains/CLion 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ctime
+ C:/Program Files/JetBrains/CLion 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/parse_numbers.h
  C:/LAB/C++/Projects/EmpresaVendeMas/Controller/Login/Login.cpp
  C:/Program Files/JetBrains/CLion 2022.1.3/bin/mingw/x86_64-w64-mingw32/include/windows.h
  C:/Program Files/JetBrains/CLion 2022.1.3/bin/mingw/x86_64-w64-mingw32/include/sdkddkver.h
@@ -375,6 +380,8 @@ CMakeFiles/EmpresaVendeMas.dir/main.cpp.obj
  C:/Program Files/JetBrains/CLion 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_bvector.h
  C:/Program Files/JetBrains/CLion 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/vector.tcc
  C:/Program Files/JetBrains/CLion 2022.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bitset
+ C:/LAB/C++/Projects/EmpresaVendeMas/Controller/VendedorController.cpp
+ C:/LAB/C++/Projects/EmpresaVendeMas/Model/Vendedores/Vendedor.cpp
  C:/LAB/C++/Projects/EmpresaVendeMas/Controller/CategoriaController.cpp
  C:/LAB/C++/Projects/EmpresaVendeMas/Model/Categoria.cpp
  C:/LAB/C++/Projects/EmpresaVendeMas/Controller/ClienteController.cpp
@@ -383,4 +390,6 @@ CMakeFiles/EmpresaVendeMas.dir/main.cpp.obj
  C:/LAB/C++/Projects/EmpresaVendeMas/Model/Producto.cpp
  C:/LAB/C++/Projects/EmpresaVendeMas/Controller/VentaController.cpp
  C:/LAB/C++/Projects/EmpresaVendeMas/Model/Venta.cpp
+ C:/LAB/C++/Projects/EmpresaVendeMas/Controller/DetalleVentaController.cpp
+ C:/LAB/C++/Projects/EmpresaVendeMas/Model/DetalleVenta.cpp
 

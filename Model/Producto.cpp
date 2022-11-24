@@ -8,16 +8,16 @@ class Producto {
 
 private:
     int codigoProducto;
-    string nombreProducto = "Pasta";
+    string nombreProducto;
     string descripcionProducto;
-    float precioProducto;
+    long precioProducto;
     int stockProducto;
     int codigoCategoria;
 
 public:
     Producto() {}
 
-    Producto(int codigoProducto, string nombreProducto, string descripcionProducto, float precioProductoint, int stockProducto, int codigoCategoria) {
+    Producto(int codigoProducto, string nombreProducto, string descripcionProducto, long precioProducto, int stockProducto, int codigoCategoria) {
         this->codigoProducto = codigoProducto;
         this->nombreProducto = nombreProducto;
         this->descripcionProducto = descripcionProducto;
@@ -31,7 +31,7 @@ public:
     }
 
     void setCodigoProducto(int codigoProducto) {
-        Producto::codigoProducto = codigoProducto;
+        this->codigoProducto = codigoProducto;
     }
 
     string getNombreProducto() {
@@ -39,7 +39,7 @@ public:
     }
 
     void setNombreProducto(string nombreProducto) {
-        Producto::nombreProducto = nombreProducto;
+        this->nombreProducto = nombreProducto;
     }
 
     string getDescripcionProducto() {
@@ -47,15 +47,15 @@ public:
     }
 
     void setDescripcionProducto(string descripcionProducto) {
-        descripcionProducto = descripcionProducto;
+        this->descripcionProducto = descripcionProducto;
     }
 
-    float getPrecioProducto() {
+    long getPrecioProducto() {
         return precioProducto;
     }
 
-    void setPrecioProducto(float precioProducto) {
-        precioProducto = precioProducto;
+    void setPrecioProducto(long precioProducto) {
+        this->precioProducto = precioProducto;
     }
 
     int getStockProducto() {
@@ -63,7 +63,7 @@ public:
     }
 
     void setStockProducto(int stockProducto) {
-        stockProducto = stockProducto;
+        this->stockProducto = stockProducto;
     }
 
     int getCodigoCategoria() {
@@ -71,6 +71,6 @@ public:
     }
 
     void setCodigoCategoria(int codigoCategoria) {
-        codigoCategoria = codigoCategoria;
+        this->codigoCategoria = codigoCategoria;
     }
 };

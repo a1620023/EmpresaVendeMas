@@ -1,6 +1,7 @@
 //
 // Created by emelc on 27/10/2022.
 //
+#pragma once
 #include <iostream>
 #include <fstream>
 #include <vector>

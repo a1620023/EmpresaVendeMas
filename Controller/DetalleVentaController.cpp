@@ -9,35 +9,44 @@ using  std::stoi;
 
 class DetalleVentaController {
 private:
-    vector<DetalleVenta> detalleVentaVector;
+    vector<DetalleVenta> vectorDetalleVenta;
 
 public:
     DetalleVentaController() {}
 
-    void add(DetalleVenta obj) {
-        detalleVentaVector.push_back(obj);
+    void registrarDetalleVenta(DetalleVenta objetoDetalleVenta) {
+        vectorDetalleVenta.push_back(objetoDetalleVenta);
     }
 
-    DetalleVenta get(int pos) {
-        return detalleVentaVector[pos];
+    DetalleVenta getPosicion(int posicion){
+        return vectorDetalleVenta[posicion];
     }
 
-    int rows() {
-        return detalleVentaVector.size();
+    int size() {
+        return vectorDetalleVenta.size();
     }
 
-    void grabarArchivo() {
+    int getCorrelativo(){
+        if (size() == 0){
+            return 1;
+        } else {
+            return vectorDetalleVenta[size() -1].getCodigoDetalleVenta() +1;
+        }
+    }
+
+
+    void guardarEnArchivo(DetalleVenta objetoDetalleVenta) {
         try {
             fstream archivoDetalle;
             archivoDetalle.open("DetalleVenta.txt", ios::app);
             if (archivoDetalle.is_open()) {
-                for (DetalleVenta l : detalleVentaVector) {
-                    archivoDetalle << l.getPrecioVenta() << ";" << l.getDescripcion() << ";" << l.getCodigoProducto() << ";" << l.getCantidad() << ";" << l.getPrecioVenta() << ";" << endl;
-                }
+                archivoDetalle <<objetoDetalleVenta.getCodigoDetalleVenta() <<";"<< objetoDetalleVenta.getCodigoVenta() <<";"
+                                <<objetoDetalleVenta.getCodigoProducto() <<";"<< objetoDetalleVenta.getCantidad() <<";"
+                                <<objetoDetalleVenta.getPrecioVenta() <<";"<<endl;
                 archivoDetalle.close();
             }
         }catch (exception e) {
-            cout << "�ERROR AL GRABAR EL REGISTRO!";
+            cout << "ERROR AL GRABAR EL REGISTRO";
         }
     }
 
@@ -61,13 +70,13 @@ public:
                         }
                         //Crear un objeto tipo Cliente
                         DetalleVenta detalle;
-                        detalle.setCodigoVenta(std::stoi(temporal[0]));
-                        detalle.setDescripcion(temporal[1]);
+                        detalle.setCodigoDetalleVenta(std::stoi(temporal[0]));
+                        detalle.setCodigoVenta(std::stoi(temporal[1]));
                         detalle.setCodigoProducto(std::stoi(temporal[2]));
                         detalle.setCantidad(std::stoi(temporal[3]));
                         detalle.setPrecioVenta(std::stof(temporal[4]));
 
-                        add(detalle);
+                        registrarDetalleVenta(detalle);
                     }
                 }
             }
@@ -81,9 +90,8 @@ public:
             fstream archivoDetalle;
             archivoDetalle.open("DetalleVenta.txt", ios::out);
             if (archivoDetalle.is_open()) {
-                for (DetalleVenta x : detalleVentaVector) {
-                    archivoDetalle <<
-                                   x.getCodigoVenta() << "." << x.getCodigoProducto() << "." << x.getCantidad() << "." << x.getPrecioVenta() << "." << "\n";
+                for (DetalleVenta x : vectorDetalleVenta) {
+                    archivoDetalle << x.getCodigoDetalleVenta() << "." << x.getCodigoVenta() << "." << x.getCodigoProducto() << "." << x.getCantidad() << "." << x.getPrecioVenta() << "." << "\n";
                 }
                 archivoDetalle.close();
             }
