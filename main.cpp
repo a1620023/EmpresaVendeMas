@@ -43,20 +43,20 @@ DetalleVentaController* detalleVentaController = new DetalleVentaController();
  
 int main(){
     //login();
-    //d->log();
+    d->log();
     //menuDeOpciones();
-    registrarProductoItems();
+    //registrarProductoItems();
     //registrarClienteItems();
-    cout << "Producto buscado"<<endl;
-    cout << productoController->buscarPorCodigo(1) <<endl;
+    //cout << "Producto buscado"<<endl;
+    //cout << productoController->buscarPorCodigo(1) <<endl;
     //cout << "Cliente"<<endl;
     //cout << "________________________________________________"<<endl;
     //clienteController->buscarCodigoCliente("11");
-    cout << "________________________________________________"<<endl;
+    //cout << "________________________________________________"<<endl;
 
     //cout << "Del archivo"<<endl;
-    productoController->cargarDatosDelArchivoAlVector();
-    cout << "________________________________________________" << endl;
+    //productoController->cargarDatosDelArchivoAlVector();
+    //cout << "________________________________________________" << endl;
     //cout << productoController->cargarDatosDelArchivoAlVector()<<endl;
 
     //registrarClienteItems();
