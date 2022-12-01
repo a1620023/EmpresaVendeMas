@@ -44,7 +44,7 @@ DetalleVentaController* detalleVentaController = new DetalleVentaController();
 int main(){
     //login();
     d->log();
-    //menuDeOpciones();
+    menuDeOpciones();
     //registrarProductoItems();
     //registrarClienteItems();
     //cout << "Producto buscado"<<endl;
