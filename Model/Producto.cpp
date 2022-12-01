@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-class Producto {
+class Producto : public error_code {
 
 private:
     int codigoProducto;

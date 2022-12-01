@@ -33,6 +33,20 @@ public:
         }
     }
 
+    Producto buscarPorCodigo(int dato)
+    {
+        Producto objError;
+        objError.setNombreProducto("Error");
+        for (int i = 0; i < vectorProducto.size(); i++)
+        {
+            if (dato == vectorProducto[i].getCodigoProducto())
+            {
+                return vectorProducto[i];
+            }
+        }
+        return objError;
+    }
+
     void guardarEnArchivo(Producto objetoProducto) {
         cout <<"Guardando Producto..."<<endl;
         try {
@@ -53,26 +67,38 @@ public:
         cout <<"Cargando Productos del archvio..."<<endl;
         try {
             int i;
-            size_t posicion;
+            size_t posi; //Cantida Maxima
             string linea;
-            string arregloTemporal[4];
+            string temporal[6];
             fstream archivoProducto;
-            archivoProducto.open("Productos.csv", ios::in);
-            if (archivoProducto.is_open()){
-                while (!archivoProducto.eof() && getline(archivoProducto, linea)){
-                    i = 0;
-                    while ((posicion = linea.find(";")) != string::npos){
-                        arregloTemporal[i] = linea.substr(0, posicion);
-                        linea.erase(0, posicion + 1);
-                        ++i;
-                    }
+            archivoProducto.open("Productos.txt", ios::in);
+            if (archivoProducto.is_open()) {
+                while (!archivoProducto.eof()) {
+                    while (getline(archivoProducto, linea)) {
+                        i = 0;
+                        while ((posi = linea.find(".")) != string::npos) //npos vale -1
+                        {
+                            temporal[i] = linea.substr(0, posi);
+                            linea.erase(0, posi + 1);
+                            i++;
+                        }
+                        //Crear un objeto tipo Producto
+                        Producto objProducto;
+                        objProducto.setCodigoProducto(stoi(temporal[0]));
+                        objProducto.setNombreProducto(temporal[1]);
+                        objProducto.setDescripcionProducto(temporal[2]);
+                        objProducto.setPrecioProducto(stoi(temporal[3]));
+                        objProducto.setStockProducto(stof(temporal[4]));
+                        objProducto.setCodigoCategoria(stof(temporal[5]));
 
-                    Producto objProd(stoi(arregloTemporal[0]), arregloTemporal[1], arregloTemporal[2], stoi(arregloTemporal[3]), stoi(arregloTemporal[4]), stoi(arregloTemporal[5]));
-                    registrarProducto(objProd);
+                        registrarProducto(objProducto);
+                    }
                 }
             }
-        } catch (exception e) {
-            cout <<"Ocurrio un error al cargar Productos del archivo"<<endl;
+            archivoProducto.close();
+        }
+        catch (exception e) {
+            cout << "Ocurrio un ERROR al momento de leer el archivo";
         }
     }
 

@@ -8,9 +8,10 @@
   "ExpandedNodes": [
     "",
     "\\Controller",
+    "\\Controller\\Login",
     "\\Model",
     "\\Model\\Vendedores"
   ],
-  "SelectedNode": "\\main.cpp",
+  "SelectedNode": "\\Controller\\ClienteController.cpp",
   "PreviewInSolutionExplorer": false
 }

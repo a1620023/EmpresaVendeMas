@@ -1,5 +1,5 @@
-#include <iostream>
 
+#include "iostream"
 #include <string>
 #include <conio.h>
 #include <chrono>
@@ -44,7 +44,21 @@ DetalleVentaController* detalleVentaController = new DetalleVentaController();
 int main(){
     //login();
     //d->log();
-    menuDeOpciones();
+    //menuDeOpciones();
+    registrarProductoItems();
+    //registrarClienteItems();
+    cout << "Producto buscado"<<endl;
+    cout << productoController->buscarPorCodigo(1) <<endl;
+    //cout << "Cliente"<<endl;
+    //cout << "________________________________________________"<<endl;
+    //clienteController->buscarCodigoCliente("11");
+    cout << "________________________________________________"<<endl;
+
+    //cout << "Del archivo"<<endl;
+    productoController->cargarDatosDelArchivoAlVector();
+    cout << "________________________________________________" << endl;
+    //cout << productoController->cargarDatosDelArchivoAlVector()<<endl;
+
     //registrarClienteItems();
     //registrarVentaItems();
 }
@@ -363,6 +377,7 @@ void listarItemCategorias(){
 void listarItemProductos(){
     if (productoController->size() >= 1){
         cout<<"...listando Productos"<<endl;
+        cout << "|  CODIGO  |   NOMBRE  |   DESCRIPCION     |   PRECIO  STOCK   |   COD_CATEGORIA   |" << endl;
         for(int i = 0;i<productoController->size();i++)
         {
             cout<<productoController->getPosicion(i).getCodigoProducto() <<"\t"<<productoController->getPosicion(i).getNombreProducto()<<"\t"

@@ -67,7 +67,7 @@ public:
         system("pause");
     }
 
-    string buscarCodigoCliente(string buscarDNI) {
+    void buscarCodigoCliente(string buscarDNI) {
         int codigoCliente;
         string nombresCliente;
         string apellidosCliente;
@@ -77,7 +77,7 @@ public:
 
         ifstream Leer;
         system("cls");
-        Leer.open("Clientes.csv");
+        Leer.open("Clientes.txt");
         Leer>>codigoCliente >>nombresCliente >>apellidosCliente >>dniCliente >>edadCliente;
         bool encontrado = false;
         //cout<<"Ingrese su numero de cedula para buscar"<<endl;
@@ -90,7 +90,7 @@ public:
                 cout<<"Codigo:    "<<codigoCliente<<endl;
                 cout<<"Nombre:    "<<nombresCliente<<endl;
                 cout<<"Apellido:  "<<apellidosCliente<<endl;
-                cout<<"dniCliente:      "<<dniCliente<<" anio"<<endl;
+                cout<<"dniCliente:      "<<dniCliente<<endl;
                 cout<<"edadCliente:  "<<edadCliente<<endl;
                 cout<<"----------------------------"<<endl;
                 cout<<endl;
@@ -108,7 +108,7 @@ public:
         cout << "...guardando cliente" << endl;
         try {
             fstream archivoCliente;
-            archivoCliente.open("Clientes.csv", ios::app);
+            archivoCliente.open("Clientes.txt", ios::app);
             if (archivoCliente.is_open()) {
                 archivoCliente << objCliente.getCodigoCliente() << ";" << objCliente.getNombresCliente() << ";"
                                << objCliente.getApellidosCliente() << ";" << objCliente.getDniCliente() << ";"
@@ -128,7 +128,7 @@ public:
             string linea;
             string temporal[4];
             fstream archivoCliente;
-            archivoCliente.open("Clientes.csv", ios::in);
+            archivoCliente.open("Clientes.txt", ios::in);
             if (archivoCliente.is_open()) {
                 while (!archivoCliente.eof() && getline(archivoCliente, linea)) {
                     i = 0;
